@@ -6,7 +6,7 @@ import {initializeState} from "./botStates";
 const handleBotMessage = async (bot: TelegramBot, message: Message) => {
     const chatId = message.chat.id;
 
-    initializeState(message.chat.id);
+    initializeState(chatId);
     const commandResult = handleMessageCommand(message);
 
     if (commandResult == null) return;
